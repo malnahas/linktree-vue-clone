@@ -4,7 +4,7 @@ import LinkCard from '@/components/LinkCard.vue'
 
 const profile = ref({
   name: 'Mohammed Alnahas',
-  slogan: 'Full Stack Developer and Teacher',
+  slogan: 'STC College Student',
   avatar: 'https://images5.alphacoders.com/127/thumb-1920-1273036.jpg',
 })
 </script>
