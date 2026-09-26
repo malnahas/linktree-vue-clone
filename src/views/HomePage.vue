@@ -6,6 +6,29 @@ const profile = ref({
   name: 'Mohammed Alnahas',
   slogan: 'STC College Student',
   avatar: 'https://images5.alphacoders.com/127/thumb-1920-1273036.jpg',
+  links: [
+    {
+      id: 1,
+      title: 'Github',
+      url: 'https://github.com/malnahas',
+      icon: 'code',
+      description: 'Check out my projects',
+    },
+    {
+      id: 2,
+      title: 'Linkedin',
+      url: 'https://linkedin.com/in/mohammed-alnahas-b22062214/',
+      icon: 'briefcase',
+      description: 'Connect with me me professionally',
+    },
+    {
+      id: 3,
+      title: 'Expense Slitter Project',
+      url: 'https://github.com/malnahas/expense-splitter-vue.git',
+      icon: 'file',
+      description: 'Connect with me me professionally',
+    },
+  ],
 })
 </script>
 <template>
@@ -13,7 +36,7 @@ const profile = ref({
     <!-- Profile Header -->
     <div class="tect-center mb-8 flex flex-col items-center">
       <div
-        class="mb-4 h-24 w-24 overflow-hidden rounded-full border-4 border-green-400 shadow-lg shadow-green-500/20 sm:h-32 sm:w-32"
+        class="mb-4 h-24 w-24 overflow-hidden rounded-full border-4 border-yellow-600/30 shadow-lg shadow-yellow-500/20 sm:h-32 sm:w-32"
       >
         <img
           :src="profile.avatar"
@@ -24,21 +47,25 @@ const profile = ref({
       <h1 class="mb-2 font-display text-2xl font-bold text-white sm:text-3xl">
         {{ profile.name }}
       </h1>
-      <p class="max-w-xs text-gray-300 sm:text-lg">{{ profile.slogan }}</p>
+      <p class="max-w-xs text-gray-400 sm:text-lg">{{ profile.slogan }}</p>
     </div>
 
     <!--Link List -->
     <div class="flex w-full max-w-md flex-col gap-4">
       <LinkCard
-        v-for="x of [1, 2, 3]"
-        :key="x"
+        v-for="link in profile.links"
+        :key="link.id"
+        :title="link.title"
+        :url="link.url"
+        :description="link.description"
+        :icon="link.icon"
       />
     </div>
 
     <!-- Navigate to Info -->
     <RouterLink
       to="/info"
-      class="underline-offest-4 mt-8 text-sm text-gray-400 underline-offset-4 transition-colors duration-200 hover:text-green-400 hover:underline"
+      class="underline-offest-4 mt-8 text-sm text-gray-500/30 underline-offset-4 transition-colors duration-200 hover:text-blue-500/40 hover:underline"
     >
       About me →
     </RouterLink>

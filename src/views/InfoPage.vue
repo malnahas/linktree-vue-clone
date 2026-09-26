@@ -5,7 +5,7 @@ const bio = ref({
   name: 'Mohammed Alnahas',
   avatar: 'https://images5.alphacoders.com/127/thumb-1920-1273036.jpg',
   about: `I'm dedicated software student with experience building modern web appliations. I like working on computers from the hardware to programming and troubleshooting, in addition, I love making beautiful and effective websites for businesses and orginzations. I am currently a student in STC and will be graduting in the end of this semster.`,
-  skills: ['Vue.js', 'React', 'Typescript', 'Node.js', 'Tailwind CSS'],
+  skills: ['Git & GitHub', 'HTML', 'Website Development', 'Website Deployment', 'JSON'],
   email: 'malnahas@stu.southtexascollege.edu',
   location: 'Dallas, Tx',
 })
@@ -15,7 +15,7 @@ const bio = ref({
   <main class="px4 py8 flex min-h-screen flex-col items-center sm:py-12">
     <RouterLink
       to="/"
-      class="underline-offest-4 my-8 self-start text-sm text-gray-400 underline-offset-4 transition-colors duration-200 hover:text-green-400 hover:underline"
+      class="underline-offest-4 my-8 self-start text-sm text-gray-400 underline-offset-4 transition-colors duration-200 hover:text-yellow-400 hover:underline"
     >
       ← Back to Links
     </RouterLink>
@@ -27,7 +27,7 @@ const bio = ref({
       <!-- Header -->
       <div class="mb-6 flex flex-col items-center text-center sm:flex-row sm:text-left">
         <div
-          class="mb-4 h-20 w-20 shrink-0 overflow-hidden rounded-full border-4 border-green-400 sm:mr-6 sm:mb-0"
+          class="mb-4 h-20 w-20 shrink-0 overflow-hidden rounded-full border-4 border-yellow-400 sm:mr-6 sm:mb-0"
         >
           <img
             :src="bio.avatar"
@@ -36,8 +36,8 @@ const bio = ref({
           />
         </div>
         <div>
-          <h1 class="mb-1 font-display text-2xl font-bold text-white">{{ bio.name }}</h1>
-          <p class="text-small text-gray-400">📍 {{ bio.location }}</p>
+          <h1 class="mb-1 font-display text-3xl font-bold text-white">{{ bio.name }}</h1>
+          <p class="text-small text-gray-600">📍 {{ bio.location }}</p>
         </div>
       </div>
 
@@ -54,7 +54,7 @@ const bio = ref({
           <span
             v-for="skill in bio.skills"
             :key="skill"
-            class="rounded-full bg-green-900/50 px-3 py-1 text-sm text-green-300"
+            class="rounded-full bg-green-900/50 px-3 py-1 text-sm text-yellow-300"
             >{{ skill }}
           </span>
         </div>
@@ -64,7 +64,7 @@ const bio = ref({
         <h2 class="mb-3 text-lg font-semibold text-white">Get in touch</h2>
         <a
           :href="`mailto:${bio.email}`"
-          class="group inline-flex items-center gap-2 rounded-xl bg-green-500 px-5 py-3 font-medium text-white shadow-lg shadow-green-500/30 transition-all duration-200 hover:scale-105 hover:bg-green-600 hover:shadow-xl hover:shadow-green-500/40 active:scale-95"
+          class="group inline-flex items-center gap-2 rounded-xl bg-yellow-500 px-5 py-3 font-medium text-white shadow-lg shadow-green-500/30 transition-all duration-200 hover:scale-105 hover:bg-green-600 hover:shadow-xl hover:shadow-green-500/40 active:scale-95"
         >
           <svg
             data-slot="icon"
