@@ -26,7 +26,14 @@ const profile = ref({
       title: 'Expense Slitter Project',
       url: 'https://github.com/malnahas/expense-splitter-vue.git',
       icon: 'file',
-      description: 'Connect with me me professionally',
+      description: 'Check out my Expense Splitter project',
+    },
+    {
+      id: 4,
+      title: 'Anime Roulette Project',
+      url: 'https://fad18719.anime-roulette-watchlist-epi.pages.dev/',
+      icon: 'tv',
+      description: 'Check my project Anime Roulette',
     },
   ],
 })
